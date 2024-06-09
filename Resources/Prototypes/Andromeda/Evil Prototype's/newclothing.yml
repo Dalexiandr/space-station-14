@@ -1,0 +1,11 @@
+- type: entity
+  parent: BriefcaseBrown
+  id: BlackCase
+  name: черный дипломат
+  suffix: Андромеда, Пустой
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/clothing/blackcase.rsi
+    state: icon
+  - type: Item
+    sprite: Andromeda/Evil/clothing/blackcase.rsi

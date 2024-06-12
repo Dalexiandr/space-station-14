@@ -1,0 +1,58 @@
+# playtime healer neck loadout
+- type: loadoutEffectGroup
+  id: CMOHealerCloak
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobChiefMedicalOfficer
+      time: 360000 # 100 Hours
+
+# Neck
+- type: loadout
+  id: HealerCloak
+  equipment: HealerCloak
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: CMOHealerCloak
+
+- type: startingGear
+  id: HealerCloak
+  equipment:
+    neck: ClothingNeckHealerCloak
+
+
+# Panties
+
+- type: loadout
+  id: CMOBoxers
+  equipment: CaptainBoxers
+
+- type: startingGear
+  id: CMOBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersCMO
+
+
+- type: loadout
+  id: CMOPanties
+  equipment: CMOPanties
+
+- type: startingGear
+  id: CMOPanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesCMO
+
+
+# Bra
+
+
+- type: loadout
+  id: CMOBra
+  equipment: CMOBra
+
+- type: startingGear
+  id: CMOBra
+  equipment:
+    underweart: ClothingUnderwearTopBraCMO
+

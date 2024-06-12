@@ -1,10 +1,8 @@
 using Content.Shared.Access;
 using Content.Shared.Players.PlayTimeTracking;
-using Content.Shared.Roles;
 using Content.Shared.StatusIcon;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.List;
 
 namespace Content.Shared.Roles
 {
@@ -64,6 +62,11 @@ namespace Content.Shared.Roles
         [DataField("canBeAntag")]
         public bool CanBeAntag { get; private set; } = true;
 
+        // A-13 Upgraded Chat System start
+        [DataField("radioBold")]
+        public bool RadioIsBold { get; } = false;
+        // A-13 Upgraded Chat System end
+
         /// <summary>
         ///     Whether this job is a head.
         ///     The job system will try to pick heads before other jobs on the same priority level.
@@ -116,6 +119,9 @@ namespace Content.Shared.Roles
 
         [DataField("extendedAccessGroups")]
         public IReadOnlyCollection<ProtoId<AccessGroupPrototype>> ExtendedAccessGroups { get; private set; } = Array.Empty<ProtoId<AccessGroupPrototype>>();
+
+        [DataField]
+        public bool Whitelisted;
     }
 
     /// <summary>

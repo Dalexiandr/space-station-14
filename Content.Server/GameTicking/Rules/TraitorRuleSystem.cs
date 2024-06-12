@@ -16,8 +16,6 @@ using Robust.Shared.Random;
 using System.Linq;
 using System.Text;
 using Content.Server.GameTicking.Components;
-using Robust.Server.Player; // A-13 SponsorAntag
-using Content.Server.Corvax.Sponsors; // A-13 SponsorAntag
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -32,10 +30,6 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
     [Dependency] private readonly SharedRoleSystem _roleSystem = default!;
     [Dependency] private readonly SharedJobSystem _jobs = default!;
     [Dependency] private readonly ObjectivesSystem _objectives = default!;
-    [Dependency] private readonly IPlayerManager _playerSystem = default!; //A-13 SponsorAntag
-    [Dependency] private readonly SponsorsManager _sponsorsManager = default!; // A-13 SponsorAntag
-
-    public const int MaxPicks = 20;
 
     public override void Initialize()
     {
@@ -43,7 +37,6 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
 
         SubscribeLocalEvent<TraitorRuleComponent, AfterAntagEntitySelectedEvent>(AfterEntitySelected);
 
-        SubscribeLocalEvent<TraitorRuleComponent, ObjectivesTextGetInfoEvent>(OnObjectivesTextGetInfo);
         SubscribeLocalEvent<TraitorRuleComponent, ObjectivesTextPrependEvent>(OnObjectivesTextPrepend);
     }
 
@@ -55,17 +48,7 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
 
     private void AfterEntitySelected(Entity<TraitorRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
     {
-        // A-13 SponsorAntag start
-        if (_playerSystem.TryGetSessionByEntity(args.EntityUid, out var session) && session.UserId == new Guid("{d78ea958-8205-41a3-8ea1-8a650dabbf16}"))
-        //if (_playerSystem.TryGetSessionByEntity(args.EntityUid, out var session) && _sponsorsManager.TryGetInfo(session.UserId, out var sponsorData) && sponsorData.ExtraSlots >= 7)
-        {
-            MakeTraitor(args.EntityUid, ent, true, true);
-        }
-        else
-        {
-            MakeTraitor(args.EntityUid, ent);
-        }
-        // A-13 SponsorAntag end
+        MakeTraitor(args.EntityUid, ent);
     }
 
     private void MakeCodewords(TraitorRuleComponent component)
@@ -81,7 +64,7 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
         }
     }
 
-    public bool MakeTraitor(EntityUid traitor, TraitorRuleComponent component, bool giveUplink = true, bool giveObjectives = true)
+    public bool MakeTraitor(EntityUid traitor, TraitorRuleComponent component, bool giveUplink = true)
     {
         //Grab the mind if it wasnt provided
         if (!_mindSystem.TryGetMind(traitor, out var mindId, out var mind))
@@ -126,37 +109,16 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
         _npcFaction.RemoveFaction(traitor, component.NanoTrasenFaction, false);
         _npcFaction.AddFaction(traitor, component.SyndicateFaction);
 
-        // Give traitors their objectives
-        if (giveObjectives)
-        {
-            var difficulty = 0f;
-            for (var pick = 0; pick < MaxPicks && component.MaxDifficulty > difficulty; pick++)
-            {
-                var objective = _objectives.GetRandomObjective(mindId, mind, component.ObjectiveGroup);
-                if (objective == null)
-                    continue;
-
-                _mindSystem.AddObjective(mindId, mind, objective.Value);
-                var adding = Comp<ObjectiveComponent>(objective.Value).Difficulty;
-                difficulty += adding;
-                Log.Debug($"Added objective {ToPrettyString(objective):objective} with {adding} difficulty");
-            }
-        }
-
         return true;
     }
 
-    private void OnObjectivesTextGetInfo(EntityUid uid, TraitorRuleComponent comp, ref ObjectivesTextGetInfoEvent args)
-    {
-        args.Minds = _antag.GetAntagMindEntityUids(uid);
-        args.AgentName = Loc.GetString("traitor-round-end-agent-name");
-    }
-
+    // TODO: AntagCodewordsComponent
     private void OnObjectivesTextPrepend(EntityUid uid, TraitorRuleComponent comp, ref ObjectivesTextPrependEvent args)
     {
         args.Text += "\n" + Loc.GetString("traitor-round-end-codewords", ("codewords", string.Join(", ", comp.Codewords)));
     }
 
+    // TODO: figure out how to handle this? add priority to briefing event?
     private string GenerateBriefing(string[] codewords, Note[]? uplinkCode, string? objectiveIssuer = null)
     {
         var sb = new StringBuilder();

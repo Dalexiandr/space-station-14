@@ -1,0 +1,119 @@
+# ChiefEngineer Time
+- type: loadoutEffectGroup
+  id: DarkChiefEngineer
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobChiefEngineer
+      time: 360000 # 100 Hours
+
+# Jumpsuit
+- type: loadout
+  id: DarkChiefEngineerJumpsuit
+  equipment: DarkChiefEngineerJumpsuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: DarkChiefEngineer
+
+- type: startingGear
+  id: DarkChiefEngineerJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChiefEngineerDark
+
+- type: loadout
+  id: DarkChiefEngineerJumpskirt
+  equipment: DarkChiefEngineerJumpskirt
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: DarkChiefEngineer
+
+- type: startingGear
+  id: DarkChiefEngineerJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtChiefEngineerDark
+
+- type: loadout
+  id: DarkChiefEngineerTurtleneck
+  equipment: DarkChiefEngineerTurtleneck
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: DarkChiefEngineer
+
+- type: startingGear
+  id: DarkChiefEngineerTurtleneck
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChiefEngineerTurtleDark
+
+- type: loadout
+  id: DarkChiefEngineerTurtleneckSkirt
+  equipment: DarkChiefEngineerTurtleneckSkirt
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: DarkChiefEngineer
+
+- type: startingGear
+  id: DarkChiefEngineerTurtleneckSkirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtChiefEngineerTurtleDark
+
+# Neck
+- type: loadout
+  id: DarkChiefEngineerCloak
+  equipment: DarkChiefEngineerCloak
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: DarkChiefEngineer
+
+- type: startingGear
+  id: DarkChiefEngineerCloak
+  equipment:
+    neck: ClothingNeckCloakCEDark
+
+- type: loadout
+  id: DarkChiefEngineerMantle
+  equipment: DarkChiefEngineerMantle
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: DarkChiefEngineer
+
+- type: startingGear
+  id: DarkChiefEngineerMantle
+  equipment:
+    neck: ClothingNeckMantleCEDark
+
+
+# Panties
+
+- type: loadout
+  id: CEBoxers
+  equipment: CEBoxers
+
+- type: startingGear
+  id: CEBoxers
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersCE
+
+
+- type: loadout
+  id: CEPanties
+  equipment: CEPanties
+
+- type: startingGear
+  id: CEPanties
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesCE
+
+
+# Bra
+
+
+- type: loadout
+  id: CEBra
+  equipment: CEBra
+
+- type: startingGear
+  id: CEBra
+  equipment:
+    underweart: ClothingUnderwearTopBraCE
+

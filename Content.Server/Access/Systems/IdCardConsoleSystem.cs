@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Server.StationRecords.Systems;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
@@ -10,7 +11,6 @@ using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
-using System.Linq;
 using static Content.Shared.Access.Components.IdCardConsoleComponent;
 using Content.Shared.Access;
 
@@ -85,7 +85,7 @@ public sealed class IdCardConsoleSystem : SharedIdCardConsoleSystem
 
             var jobProto = new ProtoId<AccessLevelPrototype>(string.Empty);
             if (TryComp<StationRecordKeyStorageComponent>(targetId, out var keyStorage)
-                && keyStorage.Key is {} key
+                && keyStorage.Key is { } key
                 && _record.TryGetRecord<GeneralStationRecord>(key, out var record))
             {
                 jobProto = record.JobPrototype;
@@ -132,8 +132,19 @@ public sealed class IdCardConsoleSystem : SharedIdCardConsoleSystem
             && _prototype.TryIndex<StatusIconPrototype>(job.Icon, out var jobIcon))
         {
             _idCard.TryChangeJobIcon(targetId, jobIcon, player: player);
+
+            // A-13 upgraded chat system start
+            _idCard.TryChangeJobColor(
+                targetId,
+                PresetIdCardSystem.GetJobColor(_prototype, job),
+                job.RadioIsBold
+            );
+            // A-13 upgraded chat system start
+
             _idCard.TryChangeJobDepartment(targetId, job);
         }
+
+        UpdateStationRecord(uid, targetId, newFullName, newJobTitle, job);
 
         if (!newAccessList.TrueForAll(x => component.AccessLevels.Contains(x)))
         {
@@ -168,8 +179,6 @@ public sealed class IdCardConsoleSystem : SharedIdCardConsoleSystem
         This current implementation is pretty shit as it logs 27 entries (27 lines) if someone decides to give themselves AA*/
         _adminLogger.Add(LogType.Action, LogImpact.Medium,
             $"{ToPrettyString(player):player} has modified {ToPrettyString(targetId):entity} with the following accesses: [{string.Join(", ", addedTags.Union(removedTags))}] [{string.Join(", ", newAccessList)}]");
-
-        UpdateStationRecord(uid, targetId, newFullName, newJobTitle, job);
     }
 
     /// <summary>

@@ -79,7 +79,6 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
-    - GlassesNearsight #A-13 Nearsight
 
 - type: entity
   parent: ClothingEyesBase
@@ -224,6 +223,11 @@
     - type: Clothing
       sprite: Clothing/Eyes/Glasses/science.rsi
     - type: SolutionScanner
+    #A-13 HudChemical start
+    - type: Tag
+      tags:
+      - HudChemical
+    #A-13 HudChemical end
 
 - type: entity
   parent: ClothingEyesBase

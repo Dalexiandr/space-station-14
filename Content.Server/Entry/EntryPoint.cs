@@ -5,9 +5,6 @@ using Content.Server.Administration.Managers;
 using Content.Server.Afk;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection;
-using Content.Server.Corvax.DiscordAuth;
-using Content.Server.Corvax.JoinQueue;
-using Content.Server.Corvax.Sponsors;
 using Content.Server.Corvax.GuideGenerator;
 using Content.Server.Corvax.TTS;
 using Content.Server.Database;
@@ -19,6 +16,7 @@ using Content.Server.Info;
 using Content.Server.IoC;
 using Content.Server.Maps;
 using Content.Server.NodeContainer.NodeGroups;
+using Content.Server.Players.JobWhitelist;
 using Content.Server.Players.PlayTimeTracking;
 using Content.Server.Preferences.Managers;
 using Content.Server.ServerInfo;
@@ -27,6 +25,7 @@ using Content.Server.Voting.Managers;
 using Content.Shared.CCVar;
 using Content.Shared.Kitchen;
 using Content.Shared.Localizations;
+using Content.Server.Andromeda.AndromedaSponsorService; // A-13 Sponsor service
 using Robust.Server;
 using Robust.Server.ServerStatus;
 using Robust.Shared.Configuration;
@@ -106,16 +105,15 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<INodeGroupFactory>().Initialize();
                 IoCManager.Resolve<ContentNetworkResourceManager>().Initialize();
                 IoCManager.Resolve<GhostKickManager>().Initialize();
-                IoCManager.Resolve<DiscordAuthManager>().Initialize(); // Corvax-DiscordAuth
-                IoCManager.Resolve<SponsorsManager>().Initialize(); // Corvax-Sponsors
-                IoCManager.Resolve<JoinQueueManager>().Initialize(); // Corvax-Queue
                 IoCManager.Resolve<TTSManager>().Initialize(); // Corvax-TTS
+                IoCManager.Resolve<AndromedaSponsorManager>().LoadSponsors(); // A-13 Sponsor service
                 IoCManager.Resolve<ServerInfoManager>().Initialize();
                 IoCManager.Resolve<ServerApi>().Initialize();
 
                 _voteManager.Initialize();
                 _updateManager.Initialize();
                 _playTimeTracking.Initialize();
+                IoCManager.Resolve<JobWhitelistManager>().Initialize();
             }
         }
 

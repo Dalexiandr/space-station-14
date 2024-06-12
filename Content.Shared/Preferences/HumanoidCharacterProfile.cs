@@ -398,6 +398,7 @@ namespace Content.Shared.Preferences
             if (!_antagPreferences.SequenceEqual(other._antagPreferences)) return false;
             if (!_traitPreferences.SequenceEqual(other._traitPreferences)) return false;
             if (!Loadouts.SequenceEqual(other.Loadouts)) return false;
+            if (FlavorText != other.FlavorText) return false;
             return Appearance.MemberwiseEquals(other.Appearance);
         }
 
@@ -411,6 +412,14 @@ namespace Content.Shared.Preferences
                 Species = SharedHumanoidAppearanceSystem.DefaultSpecies;
                 speciesPrototype = prototypeManager.Index<SpeciesPrototype>(Species);
             }
+
+            // Corvax-Sponsors-Start: Reset to human if player not sponsor
+            if (speciesPrototype.SponsorOnly && !sponsorPrototypes.Contains(Species))
+            {
+                Species = SharedHumanoidAppearanceSystem.DefaultSpecies;
+                speciesPrototype = prototypeManager.Index<SpeciesPrototype>(Species);
+            }
+            // Corvax-Sponsors-End
 
             var sex = Sex switch
             {

@@ -13,6 +13,7 @@
   icon: "JobIconIAA"
   supervisors: job-supervisors-centcom
   canBeAntag: false
+  radioBold: true # A-13 upgraded chat system
   access:
   - Service
   - Brig
@@ -31,6 +32,7 @@
     id: IAAPDA
     eyes: ClothingEyesGlassesSunglasses
     ears: ClothingHeadsetIAA
+    pocket2: HyperLinkBookCorporateLaw
     underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearToplaceBra # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesLace # Andromeda-Underwear

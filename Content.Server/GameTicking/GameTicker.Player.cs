@@ -1,4 +1,7 @@
+using System.Linq;
+using Content.Corvax.Interfaces.Server;
 using Content.Server.Database;
+using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
 using Content.Shared.GameWindow;
@@ -62,7 +65,10 @@ namespace Content.Server.GameTicking
 
                     // Make the player actually join the game.
                     // timer time must be > tick length
-                    // Timer.Spawn(0, args.Session.JoinGame); // Corvax-Queue: Moved to `JoinQueueManager`
+                    // Corvax-Queue-Start
+                    if (!IoCManager.Instance!.TryResolveType<IServerJoinQueueManager>(out _))
+                        Timer.Spawn(0, () => _playerManager.JoinGame(args.Session));
+                    // Corvax-Queue-End
 
                     // A-13 WIP EblanComponent
                     var minOverallHours = 2;
@@ -208,6 +214,15 @@ namespace Content.Server.GameTicking
 
             _playerGameStatuses[session.UserId] = PlayerGameStatus.JoinedGame;
             _db.AddRoundPlayers(RoundId, session.UserId);
+
+            if (_adminManager.HasAdminFlag(session, AdminFlags.Admin))
+            {
+                if (_allPreviousGameRules.Count > 0)
+                {
+                    var rulesMessage = GetGameRulesListMessage(true);
+                    _chatManager.SendAdminAnnouncementMessage(session, Loc.GetString("starting-rule-selected-preset", ("preset", rulesMessage)));
+                }
+            }
 
             RaiseNetworkEvent(new TickerJoinGameEvent(), session.Channel);
         }

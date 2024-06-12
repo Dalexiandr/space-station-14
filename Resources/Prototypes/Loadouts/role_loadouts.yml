@@ -7,6 +7,13 @@
   - CaptainJumpsuit
   - CaptainBackpack
   - CaptainOuterClothing
+  # A-13 Loadouts start
+  - CaptainShoes
+  - CaptainGloves
+  # - BasicUnderwearBottom
+  # - BasicUnderwearTop
+  # - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Trinkets
   - Inventory # Corvax-Loadouts
 
@@ -18,6 +25,11 @@
   - HoPJumpsuit
   - HoPBackpack
   - HoPOuterClothing
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -32,6 +44,11 @@
   - PassengerGloves
   - PassengerOuterClothing
   - PassengerShoes
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -43,6 +60,11 @@
   - BartenderJumpsuit
   - CommonBackpack
   - BartenderOuterClothing
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -52,6 +74,11 @@
   groups:
   - BartenderJumpsuit
   - CommonBackpack
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -64,6 +91,11 @@
   - ChefJumpsuit
   - CommonBackpack
   - ChefOuterClothing
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -73,6 +105,11 @@
   groups:
   - LibrarianJumpsuit
   - CommonBackpack
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -83,6 +120,11 @@
   - LawyerNeck
   - LawyerJumpsuit
   - LawyerBackpack
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -96,6 +138,11 @@
   - ChaplainJumpsuit
   - ChaplainBackpack
   - ChaplainOuterClothing
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -108,6 +155,11 @@
   - JanitorGloves
   - CommonBackpack
   - JanitorOuterClothing
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -119,6 +171,12 @@
   - BotanistJumpsuit
   - BotanistBackpack
   - BotanistOuterClothing
+  # A-13 Loadouts start
+  - BotanistNeck
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -131,6 +189,11 @@
   - ClownBackpack
   - ClownOuterClothing
   - ClownShoes
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -143,6 +206,11 @@
   - MimeJumpsuit
   - MimeBackpack
   - MimeOuterClothing
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -152,6 +220,11 @@
   groups:
   - MusicianBackpack
   - MusicianOuterClothing
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -166,6 +239,11 @@
   - QuartermasterBackpack
   - QuartermasterOuterClothing
   - QuartermasterShoes
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -178,6 +256,11 @@
   - CargoTechnicianBackpack
   - CargoTechnicianOuterClothing
   - CargoTechnicianShoes
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -188,6 +271,11 @@
   - SalvageSpecialistBackpack
   - SalvageSpecialistOuterClothing
   - SalvageSpecialistShoes
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -202,6 +290,11 @@
   - ChiefEngineerNeck
   - ChiefEngineerOuterClothing
   - ChiefEngineerShoes
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Trinkets
   - Inventory # Corvax-Loadouts
 
@@ -210,6 +303,11 @@
   groups:
   - TechnicalAssistantJumpsuit
   - StationEngineerBackpack
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Trinkets
   - Inventory # Corvax-Loadouts
 
@@ -222,6 +320,11 @@
   - StationEngineerOuterClothing
   - StationEngineerShoes
   - StationEngineerID
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Trinkets
   - Inventory # Corvax-Loadouts
 
@@ -232,6 +335,11 @@
   - AtmosphericTechnicianBackpack
   - AtmosphericTechnicianOuterClothing
   - AtmosphericTechnicianShoes
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Trinkets
   - Inventory # Corvax-Loadouts
 
@@ -246,6 +354,11 @@
   - ResearchDirectorOuterClothing
   - ScientistGloves
   - ResearchDirectorShoes
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -261,6 +374,11 @@
   - ScientistGloves
   - ScientistShoes
   - ScientistPDA
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -270,6 +388,11 @@
   groups:
   - ResearchAssistantJumpsuit
   - ScientistBackpack
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -285,6 +408,11 @@
   - SecurityBelt
   - HeadofSecurityOuterClothing
   - SecurityShoes
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Trinkets
   - Inventory # Corvax-Loadouts
 
@@ -297,6 +425,11 @@
   - SecurityBelt
   - WardenOuterClothing
   - SecurityShoes
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Trinkets
   - Inventory # Corvax-Loadouts
 
@@ -310,6 +443,12 @@
   - SecurityShoes
   - SecurityPDA
   - SecurityBelt
+  # A-13 Loadouts start
+  - SecurityNeck
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Trinkets
   - Inventory # Corvax-Loadouts
 
@@ -322,6 +461,11 @@
   - DetectiveBackpack
   - DetectiveOuterClothing
   - SecurityShoes
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Trinkets
   - Inventory # Corvax-Loadouts
 
@@ -330,6 +474,11 @@
   groups:
   - SecurityCadetJumpsuit
   - SecurityBackpack
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Trinkets
   - Inventory # Corvax-Loadouts
 
@@ -345,6 +494,11 @@
   - ChiefMedicalOfficerOuterClothing
   - ChiefMedicalOfficerNeck
   - ChiefMedicalOfficerShoes
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -360,6 +514,11 @@
   - MedicalDoctorOuterClothing
   - MedicalShoes
   - MedicalDoctorPDA
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -369,6 +528,11 @@
   groups:
   - MedicalInternJumpsuit
   - MedicalBackpack
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -382,6 +546,11 @@
   - ChemistBackpack
   - ChemistOuterClothing
   - MedicalShoes
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Trinkets
   - Inventory # Corvax-Loadouts
 
@@ -395,6 +564,11 @@
   - ParamedicBackpack
   - ParamedicOuterClothing
   - ParamedicShoes
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -404,6 +578,11 @@
   id: JobZookeeper
   groups:
   - CommonBackpack
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -413,6 +592,11 @@
   groups:
   - ReporterJumpsuit
   - CommonBackpack
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -421,6 +605,11 @@
   id: JobPsychologist
   groups:
   - PsychologistBackpack # Corvax-MRP
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -431,6 +620,11 @@
   - BoxerJumpsuit
   - BoxerGloves
   - CommonBackpack
+ # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Glasses
   - Trinkets
   - Inventory # Corvax-Loadouts
